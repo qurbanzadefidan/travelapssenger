@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&family=Rubik:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />
+  <link rel="stylesheet" href="media.css">
+    <title>Rentxx</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+  </head>
+  <body>
+    <section >
+      <div class="container-fluid"></div>
+      <div class="container">
+        <div class="row" id="item">
+             <div class="col-12">
+              <div class="col-sm-6 col-lg-6 logo">Xx<span>.</span></div>
+              <div class="col-sm-6 col-lg-6 text-right">
+                <a href="">ВХОД </a>
+              </div>
+             </div>
+      
+          </div>
+      </div>
+      
+      </section>
+
+      <section class="container" id="item2">
+        <div class="row">
+       <div class="col-12  text-center">Мгновенное бронирование квартир</div>
+       
+        </div>
+       
+       </section>
+
+       <section class="container" id="item3">
+        <div class="row  h-100" >
+          <div class="col-12 "  id="input">
+            <div class="col-sm-4 col-lg-4 "> 
+              <i class="fa fa-times-circle" id="i" ></i>
+              Город <br><input type="text" class="dynamicContent" id="dropdown" onclick="fun2()" value="Куда вы едите?" > 
+              <div class="dropdown" id="dropdown">
+                <div class="dropdown-menu" id="menuitem" aria-labelledby="dropdownMenuButton" >
+                 <ul id="ul">
+                   <li >
+                    <a  href="javascript:void(0)"  onmouseover="set_mouseover('Баку, Азербайджан')" >Баку, Азербайджан</a><br>
+                   </li>
+                   <li>
+                    <a  href="javascript:void(0)" onmouseover="set_mouseover('Гянджа, Азербайджаn')">Гянджа, Азербайджаn</a><br>
+                  </li> 
+                  <li>
+                    <a  href="javascript:void(0)" onmouseover="set_mouseover('Габала, Азербайджа')">Габала, Азербайджа</a><br>
+                  </li>
+                  <li>
+                    <a  href="javascript:void(0)" onmouseover="set_mouseover('Москва, Россия')">Москва, Россия</a><br>
+                  </li>
+                  <li>
+                    <a  href="javascript:void(0)" onmouseover="set_mouseover('Киев, Украина')" >Киев, Украина</a><br>
+                  </li>
+                 </ul>
+
+                </div>
+              </div>
+            </div>
+
+
+           <div class="col-sm-2 col-lg-2  " >
+            Прибытие <br> <input type="text" id="picker" name="datefilter" value="когда?" >
+
+          </div>
+
+           <div class="col-sm-2 col-lg-2 "  >
+            Выезд  <br><input type="text" id="picker" name="datefilter" value="когда?">
+          </div>
+
+           <div class="col-sm-2 col-lg-2 " id="person">
+            Гостей <br><input type="text"  id="hidden"  onclick="calitems()"value="количество?" >
+            <div class="person">
+                
+               <div id="item_drop">
+              <div class="item_drop_inside">
+                <div class="row_item" > 
+                  <div class="person_des">
+                    <div>Взрослые</div>
+                    <div>от 12 лет</div>
+                  </div>
+                  <div class="person_calc">
+
+                    <div class="person_calc_in">
+                      <div class="qtySelector ">
+                        <i class="fa fa-minus-circle decreaseQty"></i>
+                    <input type="text" class="qtyValue" value="0" />
+                    <i class="fa fa-plus-circle increaseQty"></i>    
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+                <div class="row_item" > 
+                  <div class="person_des">
+                    <div>Дети</div>
+                    <div>от 3 до 12 лет</div>
+                  </div>
+                  <div class="person_calc">
+
+                    <div class="person_calc_in">
+                      <div class="qtySelector ">
+                        <i class="fa fa-minus-circle decreaseQty"></i>
+                    <input type="text" class="qtyValue" value="0" />
+                    <i class="fa fa-plus-circle increaseQty"></i>    
+                      </div>
+
+
+                      
+                    </div>
+
+                  </div>
+
+                </div>
+
+               <div class="row_item" > 
+                  <div class="person_des">
+                    <div>Младенцы</div>
+                    <div>до 3 лет</div>
+                  </div>
+                  <div class="person_calc">
+
+                    <div class="person_calc_in">
+                      <div class="qtySelector ">
+                        <i class="fa fa-minus-circle decreaseQty"></i>
+                    <input type="text" class="qtyValue" value="0" />
+                    <i class="fa fa-plus-circle increaseQty"></i>    
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>             
+              </div>
+
+               </div>
+
+               </div>
+               
+
+
+
+
+            </div>
+          </div>
+
+
+
+
+
+           <div class="col-sm-2 col-lg-2  " id="btn_serach">
+            <br> 
+           <div  id="search">
+            <input type="text" />
+            <button id="btn">ПОИСК
+           
+            </button>
+           </div>
+
+            </div>
+          
+          </div>
+          </div>
+       </div>
+      
+      </section>
+
+
+<section id="item4"> 
+  <div class="container ">
+    <div class="row">
+      <div col-12>
+        <div class="location">
+          <i class="fa fa-map-marker-alt"></i>   
+                 <a>Найти жилье поблизости</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<section id="item5"> 
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+<div class="flex-container">
+<div> <a href=""> Baku</a></div>
+ <div> <a href=""> Tiblisi</a></div>
+ <div> <a href=""> Ganja</a></div>
+ <div><a href=""> Quba</a></div>
+ <div><a href=""> Kitaisi</a></div>
+ <div><a href=""> Batumi</a></div>
+ <div><a href=""> Qabala</a></div>
+ <div><a href=""> Nabran</a></div>
+ <div><a href=""> Kabuleti</a></div>
+ <div><a href=""> Shahdag</a></div>
+ <div><a href=""> Minsk</a></div>
+ <div><a href=""> Brest</a></div>
+ <div><a href=""> Gomel</a></div>
+ <div><a href=""> Shemaxa</a></div>
+ <div><a href=""> Kiev</a></div>
+ <div><a href=""> Lviv</a></div>
+ <div><a href=""> Moscow</a></div>
+ <div><a href=""> Petersbourg</a></div>
+ <div><a href=""> Pula</a></div>
+ <div><a href=""> Roma</a></div>
+ <div><a href=""> Barcelona</a></div>
+ <div><a href=""> Malaga</a></div>
+ <div><a href=""> Athens</a></div>
+ <div> <a href=""> Corfu</a></div>
+ <div><a href=""> Kefalonia</a></div>
+ <div><a href=""> Chania</a></div>
+ <div><a href=""> Istambul</a></div>
+ <div><a href=""> Nur-Sultan</a></div>
+</div>
+
+    </div>
+  </div>
+</div>
+</section>
+
+
+
+
+
+
+<footer class="contact" id="cont">
+  <div class="footer">
+  <div class="contain">
+  <div class="col">
+    <h1>COMPANY</h1>
+    <ul>
+      <li>About</li>
+      <li>Partnership</li>
+      <li>Careers</li>
+    </ul>
+  </div>
+  <div class="col">
+    <h1>HOSTS</h1> 
+    <ul>
+      <li>How to hose</li>
+      <li>Payment methods</li>
+      <li> Rules and your safety</li>
+      
+    </ul>
+  </div>
+  <div class="col">
+    <h1>SUPPORT</h1> 
+    <ul>
+      <li>Knowledge</li>
+      <li>base Report abuse</li>
+    </ul>
+  </div>
+
+
+<div class="clearfix"></div>
+</div>
+</div>
+
+</footer>
+    
+
+      <script src="js.js"></script>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+
+  </body>
